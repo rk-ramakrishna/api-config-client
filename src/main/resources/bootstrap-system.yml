@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      fail-fast: true
+      uri: http://${vcap.services.configservice.credentials.uri:localhost:9444}
+      retry:
+        initial-interval: 9000
+        multiplier: 1.2
+        max-interval: 8000
+        max-attempts: 10

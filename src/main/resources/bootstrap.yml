@@ -1,0 +1,15 @@
+server:
+  port: ${vcap.application.port:9445}
+
+spring:
+  application:
+    name: api-config-client
+  profiles:
+    active: local
+
+# logging information
+logging:
+  level:
+    root: INFO
+    com.mankali.api.config.client: INFO
+    org.springframework.web: INFO
